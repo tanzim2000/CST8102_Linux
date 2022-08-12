@@ -66,7 +66,7 @@ newuseradd() {
                                 echo
                                 newuseradd
                         else
-                                sudo addUser $newuser
+                                sudo adduser $newuser
                         fi
                         echo
                         ./shapes.sh l $lineLength '#'
