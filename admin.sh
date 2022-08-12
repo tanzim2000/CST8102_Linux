@@ -1,8 +1,8 @@
 #!/bin/bash -a
 #
-#
-#
-#
+# An administrative application to run a range of commands related to users and groups in the system
+# Author: Tanzim Ahmed Sagar
+
 lineLength=$(tput cols)
 read username < <(whoami)
 read usernameFull < <(grep $(whoami) /etc/passwd | cut -d':' -f'5' | cut -d',' -f'1')
