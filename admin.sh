@@ -58,20 +58,20 @@ pause() {
 }
 newuseradd() {
 	./shapes.sh l $lineLength '#'
-                        echo
-                        read -p "Enter a login name for the user to be added:	" newuser
-                        echo
-                        if id "$newuser" >/dev/null 2>&1; then
-                                echo 1>&2 "User $newuser already exists, try another username"
-                                echo
-                                newuseradd
-                        else
-                                sudo adduser $newuser
-                        fi
-                        echo
-                        ./shapes.sh l $lineLength '#'
-			echo
-                        pause
+	echo
+	read -p "Enter a login name for the user to be added:	" newuser
+	echo
+	if id "$newuser" >/dev/null 2>&1; then
+		echo 1>&2 "User $newuser already exists, try another username"
+		echo
+		newuseradd
+	else
+		sudo adduser $newuser
+	fi
+	echo
+	./shapes.sh l $lineLength '#'
+	echo
+	pause
 
 }
 createWelcome() {
